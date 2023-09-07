@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-dotenv.config();
+
+
 const Connection = () => {
   try {
-    mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }).then(() => {console.log("DATABASE CONNECTED SUCCESSFULLY");});
+    mongoose.connect("mongodb+srv://pranavgangadhara:pranav@cluster0.kqtfdpk.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true }).then(() => {console.log("DATABASE CONNECTED SUCCESSFULLY");});
     
   } catch (error) {
     console.log("ERROR IN CONNECTING TO DATABASE", error.message);
